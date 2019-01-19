@@ -10,9 +10,9 @@ if pidof -o %PPID -x "$0"; then
    exit 1
 fi
 
-LOGFILE="/home/plex/logs/rclone-upload.log"
-FROM="/storage/local/"
-TO="gdrivecrypt:/"
+LOGFILE="/root/logs/rclone/rclone-upload.log"
+FROM="/mnt/manmove/"
+TO="gdrive:/man"
 
 # CHECK FOR FILES IN FROM FOLDER THAT ARE OLDER THAN 15 MINUTES
 if find $FROM* -type f -mmin +15 | read
